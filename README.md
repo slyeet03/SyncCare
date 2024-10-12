@@ -33,12 +33,12 @@ SyncCare is a web application designed to simplify medical management by synchro
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/synccare.git
+    git clone https://github.com/yourusername/SyncCare.git
     ```
    
 2. Navigate to the project directory:
     ```bash
-    cd synccare
+    cd SyncCare
     ```
 
 3. Create a virtual environment and activate it:
