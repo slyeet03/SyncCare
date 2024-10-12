@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncCare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+</head>
+<body>
+    <header class="header">
+        <h1>Medical Dashboard</h1>
+        {% if 'user_id' in session %}
+            <a href="{{ url_for('logout') }}" class="auth-button">Log Out</a>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="auth-button">Log In</a>
+        {% endif %}
+    </header>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="flash-messages">
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+    <div class="container">
+        <h2>Welcome to SyncCare</h2>
+        <p>Manage your medical information, order medicines, and find doctors all in one place.</p>
+
+        <div class="dashboard-links">
+            <a href="/profile" class="dashboard-link">
+                <h3>Profile</h3>
+                <p>See your profile</p>
+            </a>
+            
+            <a href="/medical_details" class="dashboard-link">
+                <h3>Medical Details</h3>
+                <p>View or update your medical history and prescriptions.</p>
+            </a>
+            
+            <a href="/recommendations" class="dashboard-link">
+                <h3>Doctor Recommendations</h3>
+                <p>Find doctors based on your medical history.</p>
+            </a>
+            
+            <a href="/upload_prescription" class="dashboard-link">
+                <h3>Upload Prescription</h3>
+                <p>Upload a digital copy of your prescription for doctors to view.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

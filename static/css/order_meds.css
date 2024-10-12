@@ -1,0 +1,63 @@
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #005b96; /* Changed to deep blue for the medical theme */
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.medicine-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.medicine-card {
+    padding: 20px;
+    border: 2px solid #007acc; /* Changed to blue for medical theme */
+    border-radius: 8px;
+    background-color: #f0f8ff; /* Light blue background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.medicine-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #007acc; /* Blue for medicine name */
+}
+
+.medicine-card p {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.order-btn {
+    padding: 10px 20px;
+    background-color: #007acc; /* Blue button for order */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #005b96; /* Darker blue on hover */
+}

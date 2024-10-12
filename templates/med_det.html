@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/med_det.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Update Medical Details</h2>
+        <p>Fill in or update your medical history, allergies, and current medications.</p>
+
+        <form action="/medical_details" method="POST" class="medical-form">
+            <label for="age">Age:</label>
+            <textarea id="age" name="age" required></textarea>
+
+            <label for="gender">Gender:</label>
+            <textarea id="gender" name="gender" required></textarea>
+
+            <label for="Weight">Weight:</label>
+            <textarea id="weight" name="weight" required></textarea>
+
+            <label for="bldgrp">Blood Group:</label>
+            <textarea id="bldgrp" name="bldgrp" required></textarea>
+
+            <label for="history">Medical History:</label>
+            <textarea id="history" name="history" required></textarea>
+
+            <label for="allergies">Allergies:</label>
+            <textarea id="allergies" name="allergies"></textarea>
+
+            <label for="medications">Medication:</label>
+            <textarea id="medications" name="medications"></textarea>
+
+            <button type="submit">Submit Details</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/doc_rec.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Recommended Doctors</h2>
+        <p>Based on your medical history, here are some recommended doctors:</p>
+
+        <div class="doctor-list">
+            {% for doctor in doctors %}
+            <div class="doctor-card">
+                <h3>{{ doctor.name }}</h3>
+                <p>Specialty: {{ doctor.specialty }}</p>
+                <p>Location: {{ doctor.location }}</p>
+                <p>Contact: {{ doctor.contact }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>User Profile</h1>
+        
+        <section class="profile-info">
+            <h2>Personal Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Name:</strong>
+                    <span>{{ user.name }}</span>
+                </div>
+                <div class="info-item">
+                    <strong>Age:</strong>
+                    <span>{{ user.age }}</span>
+                </div>
+                <div class="info-item">
+                    <strong>Gender:</strong>
+                    <span>{{ user.gender }}</span>
+                </div>
+                <div class="info-item">
+                    <strong>Phone:</strong>
+                    <span>{{ user.phone }}</span>
+                </div>
+                <div class="info-item">
+                    <strong>Aadhaar:</strong>
+                    <span>{{ user.aadhaar }}</span>
+                </div>
+                <div class="info-item">
+                    <strong>Weight:</strong>
+                    <span>{{ user.weight }}</span>
+                </div>
+                <div class="info-item">
+                    <strong>Blood Group</strong>
+                    <span>{{ user.bldgrp }}</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="medical-records">
+            <h2>Medical Records</h2>
+            <div class="record-item">
+                <h3>Medical History</h3>
+                <p>{{ user.medical_history }}</p>
+            </div>
+            <div class="record-item">
+                <h3>Allergies</h3>
+                <p>{{ user.allergies }}</p>
+            </div>
+            <div class="record-item">
+                <h3>Current Medications</h3>
+                <p>{{ user.current_medications }}</p>
+            </div>
+        </section>
+
+        <section class="uploaded-files">
+            <h2>Uploaded Prescriptions</h2>
+            <ul class="file-list">
+                {% for file in user.uploaded_files %}
+                <li class="file-item">
+                    <span class="file-name">{{ file.name }}</span>
+                    <span class="file-date">{{ file.date }}</span>
+                    <a href="{{ file.url }}" class="file-download" target="_blank">View/Download</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
