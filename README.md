@@ -8,7 +8,7 @@ SyncCare is a web application designed to simplify medical management by synchro
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+- [Contributors](#contributors)
 
 ## Features
 - **Account Creation and Authentication**: Users can sign up using their phone number and Aadhaar. Firebase Authentication ensures secure login and session management.
